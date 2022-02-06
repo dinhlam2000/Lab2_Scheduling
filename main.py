@@ -3,6 +3,7 @@ import copy
 
 from roundrobin import roundrobin
 from collections import defaultdict
+from fifo import fifo
 def parser_helper(lines):
     interrupts = defaultdict(list)
     jobs_amount = {}
@@ -51,7 +52,9 @@ if __name__ == "__main__":
 
 
     interrupts, jobs, jobs_arrival = parser_helper(lines)
+    import pdb; pdb.set_trace()
     result, job_completion = roundrobin(copy.deepcopy(interrupts),copy.deepcopy(jobs),2)
+    result2, job_completion2 = fifo(copy.deepcopy(interrupts), copy.deepcopy(jobs))
 
     turn_around_time = turn_around_time(jobs_arrival, job_completion)
     waiting_time = waiting_time(jobs, turn_around_time)
