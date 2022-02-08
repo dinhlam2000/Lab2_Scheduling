@@ -87,10 +87,10 @@ if __name__ == "__main__":
 
     average_turn_around_time = 0
     average_wait_time = 0
-
+    # import pdb; pdb.set_trace()
     for job in jobs:
         average_turn_around_time += turn_around_time[job]
         average_wait_time += waiting_time[job]
-        print("Job {0}: ----- Turn Around Time = {1}    Waiting Time = {2}".format(job,turn_around_time[job], waiting_time[job]))
-    print("Average ----- Turn Around Time = {0}   Waiting Time = {1}".format(average_turn_around_time/len(jobs), average_wait_time/len(jobs)))
+        print("Job %3d -- Turnaround %3.2f  Wait %3.2f" % (job,turn_around_time[job], waiting_time[job]))
+    print("Average -- Turnaround %3.2f  Wait %3.2f" % (average_turn_around_time/len(jobs), average_wait_time/len(jobs)))
     # import pdb; pdb.set_trace()
