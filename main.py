@@ -34,7 +34,9 @@ def main():
    for job in jobList:
       job.num = i
       i += 1
-   roundrobin(jobList, 1)
+   fifo(jobList)
+   #roundrobin(jobList, 1)
+   #shortestRemaining(jobList)
    
 
 
