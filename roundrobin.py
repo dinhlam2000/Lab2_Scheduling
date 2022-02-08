@@ -12,7 +12,7 @@ import sys
 # case 1: if on the batch that has an interrupt
 #       -> put that value onto the batch but do
 def roundrobin(interrupts, jobs, q):
-
+    # import pdb; pdb.set_trace()
     queue = interrupts[0] #start a queue that holds all the values that arrives at 0 in the order of highest priority
 
     result = [None] * (sum(jobs.values()))  #have a result list that has a length of all processes

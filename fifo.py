@@ -9,4 +9,3 @@ def fifo(interrupts, jobs):
             job_completion[job] = counter + burst_time
             counter = counter + burst_time
     return result, job_completion
-    pass
